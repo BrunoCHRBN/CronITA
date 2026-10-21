@@ -1,0 +1,18 @@
+{
+  "name": "Cronômetro ITA",
+  "short_name": "Cronômetro ITA",
+  "description": "Cronômetro de estudos e controle de matérias para o vestibular do ITA",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#111315",
+  "theme_color": "#1f5963",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+/*
+ * Design tokens. One accent hue (petrol blue), warm neutrals,
+ * one radius scale, hairline borders, opaque surfaces.
+ */
+:root {
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Text", "Segoe UI", "Noto Sans", Ubuntu,
+    Cantarell, system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", "Noto Sans", Ubuntu,
+    system-ui, sans-serif;
+
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-md: 14px;
+  --text-lg: 16px;
+  --text-xl: 22px;
+  --text-2xl: 26px;
+
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+
+  /* Curved, but restrained: one scale used everywhere. */
+  --radius-sm: 8px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+
+  --control-h: 36px;
+  --control-h-lg: 40px;
+  --sidebar-w: 236px;
+
+  --dur-fast: 120ms;
+  --dur: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0.2, 1);
+
+  --accent-h: 189;
+}
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --bg-app: #f4f3ef;
+  --bg-sidebar: #efeee9;
+  --bg-surface: #fdfdfb;
+  --bg-raised: #ffffff;
+  --bg-inset: #e9e8e2;
+  --bg-hover: rgba(30, 28, 20, 0.05);
+  --bg-active: rgba(30, 28, 20, 0.09);
+
+  --border-subtle: #e7e5df;
+  --border: #dddbd4;
+  --border-strong: #c6c3bb;
+
+  --text-primary: #1b1c1e;
+  --text-secondary: #5b5d61;
+  --text-tertiary: #8b8d91;
+  --text-on-accent: #ffffff;
+
+  --accent: hsl(var(--accent-h) 58% 29%);
+  --accent-hover: hsl(var(--accent-h) 60% 23%);
+  --accent-subtle: hsl(var(--accent-h) 34% 92%);
+  --accent-subtle-fg: hsl(var(--accent-h) 58% 24%);
+
+  --danger: #b4322a;
+  --danger-hover: #962820;
+
+  --toast-bg: #1f2124;
+  --toast-fg: #f3f3f1;
+
+  --shadow-1: 0 1px 2px rgba(30, 28, 20, 0.05);
+  --shadow-2: 0 10px 30px rgba(30, 28, 20, 0.14);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-app: #111315;
+  --bg-sidebar: #0d0f11;
+  --bg-surface: #181b1e;
+  --bg-raised: #1e2226;
+  --bg-inset: #23282c;
+  --bg-hover: rgba(255, 255, 255, 0.05);
+  --bg-active: rgba(255, 255, 255, 0.09);
+
+  --border-subtle: #22262a;
+  --border: #2a2f34;
+  --border-strong: #3a4046;
+
+  --text-primary: #e9eaeb;
+  --text-secondary: #a5abb0;
+  --text-tertiary: #737a80;
+  --text-on-accent: #0b1416;
+
+  --accent: hsl(var(--accent-h) 46% 60%);
+  --accent-hover: hsl(var(--accent-h) 50% 68%);
+  --accent-subtle: hsl(var(--accent-h) 28% 17%);
+  --accent-subtle-fg: hsl(var(--accent-h) 48% 72%);
+
+  --danger: #e0675e;
+  --danger-hover: #ea8279;
+
+  --toast-bg: #eceeef;
+  --toast-fg: #16181a;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-2: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg-app: #111315;
+    --bg-sidebar: #0d0f11;
+    --bg-surface: #181b1e;
+    --bg-raised: #1e2226;
+    --bg-inset: #23282c;
+    --bg-hover: rgba(255, 255, 255, 0.05);
+    --bg-active: rgba(255, 255, 255, 0.09);
+
+    --border-subtle: #22262a;
+    --border: #2a2f34;
+    --border-strong: #3a4046;
+
+    --text-primary: #e9eaeb;
+    --text-secondary: #a5abb0;
+    --text-tertiary: #737a80;
+    --text-on-accent: #0b1416;
+
+    --accent: hsl(var(--accent-h) 46% 60%);
+    --accent-hover: hsl(var(--accent-h) 50% 68%);
+    --accent-subtle: hsl(var(--accent-h) 28% 17%);
+    --accent-subtle-fg: hsl(var(--accent-h) 48% 72%);
+
+    --danger: #e0675e;
+    --danger-hover: #ea8279;
+
+    --toast-bg: #eceeef;
+    --toast-fg: #16181a;
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-2: 0 12px 32px rgba(0, 0, 0, 0.5);
+  }
+}
