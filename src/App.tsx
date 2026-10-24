@@ -10,7 +10,7 @@ import { elapsedOf, phaseTargetMs, useStore } from "./lib/store";
 import { SUBJECT_BY_ID } from "./lib/subjects";
 import { formatClock, formatCountdown } from "./lib/time";
 
-const BASE_TITLE = "Cronômetro ITA";
+const BASE_TITLE = "CronITA";
 
 export function App() {
   const { state, actions } = useStore();
@@ -71,10 +71,10 @@ export function App() {
     toast(msg);
     if (typeof Notification !== "undefined" && Notification.permission === "granted") {
       try {
-        new Notification("Cronômetro ITA", {
+        new Notification("CronITA", {
           body: msg,
           icon: "/icon.svg",
-          tag: "cronometro-ita-phase",
+          tag: "cronita-phase",
         });
       } catch {}
     }

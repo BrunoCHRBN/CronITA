@@ -91,7 +91,7 @@ export function AppShell({ route, now, zenMode, onOpenPalette, children }: Props
         <div className="brand">
           <BrandMark />
           <div className="brand-text">
-            <strong>Cronômetro</strong>
+            <strong>CronITA</strong>
             <span>Vestibular ITA</span>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function AppShell({ route, now, zenMode, onOpenPalette, children }: Props
         <div className="brand">
           <BrandMark />
           <div className="brand-text">
-            <strong>Cronômetro</strong>
+            <strong>CronITA</strong>
             <span className="tnum">Hoje: {formatDuration(todayMs)}</span>
           </div>
         </div>

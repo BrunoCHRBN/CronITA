@@ -427,7 +427,7 @@ function SettingsDialog({ open, onClose }: { open: boolean; onClose: () => void 
     if (perm === "granted") {
       toast("Notificações no sistema ativadas!");
       try {
-        new Notification("Cronômetro ITA", {
+        new Notification("CronITA", {
           body: "Notificações ativadas para término de blocos de foco e pausas.",
           icon: "/icon.svg",
         });
@@ -475,7 +475,7 @@ function SettingsDialog({ open, onClose }: { open: boolean; onClose: () => void 
     const a = document.createElement("a");
     const todayStr = new Date().toISOString().slice(0, 10);
     a.href = url;
-    a.download = `cronometro-ita-backup-${todayStr}.json`;
+    a.download = `cronita-backup-${todayStr}.json`;
     a.click();
     URL.revokeObjectURL(url);
     toast("Backup exportado com sucesso.");

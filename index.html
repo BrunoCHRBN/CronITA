@@ -9,12 +9,12 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Cronômetro ITA" />
-    <title>Cronômetro ITA</title>
+    <meta name="apple-mobile-web-app-title" content="CronITA" />
+    <title>CronITA</title>
     <script>
       // Apply the saved theme before first paint to avoid a flash.
       try {
-        var d = JSON.parse(localStorage.getItem("cronometro-ita:v1") || "{}");
+        var d = JSON.parse(localStorage.getItem("cronita:v1") || localStorage.getItem("cronometro-ita:v1") || "{}");
         if (d.theme === "light" || d.theme === "dark") document.documentElement.dataset.theme = d.theme;
       } catch (e) {}
     </script>

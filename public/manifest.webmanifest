@@ -1,7 +1,7 @@
 {
-  "name": "Cronômetro ITA",
-  "short_name": "Cronômetro ITA",
-  "description": "Cronômetro de estudos e controle de matérias para o vestibular do ITA",
+  "name": "CronITA",
+  "short_name": "CronITA",
+  "description": "Cronômetro e organizador de estudos para o vestibular do ITA",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",

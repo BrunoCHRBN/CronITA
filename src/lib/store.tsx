@@ -62,7 +62,8 @@ export interface AppData {
 /** Sessions shorter than this are not saved (accidental starts). */
 export const MIN_SESSION_MS = 10_000;
 
-const STORAGE_KEY = "cronometro-ita:v1";
+const STORAGE_KEY = "cronita:v1";
+const LEGACY_STORAGE_KEY = "cronometro-ita:v1";
 
 const DEFAULT_SETTINGS: Settings = {
   focusMin: 50,
@@ -101,7 +102,7 @@ function defaultData(): AppData {
 
 function load(): AppData {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!raw) return defaultData();
     const parsed = JSON.parse(raw) as Partial<AppData>;
     if (parsed.version !== 1) return defaultData();
